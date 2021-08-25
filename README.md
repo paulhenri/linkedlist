@@ -27,3 +27,5 @@ To go a bit deeper and ease the coding i tried to implement the class with tests
 	tlist.at(2).value # returns 6 - Index starts at 1
 ```
 
+Some yard doc also included - Not really useful in this context but... i could so i did it ! :beers:
+
