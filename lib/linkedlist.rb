@@ -1,9 +1,8 @@
-# frozen_string_literal: true
-
 # @author Paul-Henri BONNEMENT
 class LinkedList
   attr_reader :list
 
+  public
   # Constructor of the class
   # @param init_value [Integer] Value of the first node
   def initialize(init_value)
@@ -37,22 +36,6 @@ class LinkedList
   def size
     calc_size
   end
-
-  private
-
-  #  Calculate the number of node by travesing the list
-  #  @return [Integer] Number of nodes
-  def calc_size
-    nb = 1
-    current_node = @list
-    until current_node.nil?
-      nb += 1
-      current_node = current_node.next
-    end
-    nb
-  end
-
-  public
 
   # Return first node
   # @return [Node] First node
@@ -119,14 +102,14 @@ class LinkedList
   # To String modification
   # @return [String] String representation of the list (x) -> (y) -> [..] -> nil
   def to_s
-    to_s_string = ''
+    to_s_string = ""
     current = @list
     until current.nil?
       to_s_string << "(#{current.value}) -> "
       current = current.next
     end
     to_s_string << 'nil'
-    to_s_string
+    return to_s_string
   end
 
   # Insert a new node at given location
@@ -162,6 +145,21 @@ class LinkedList
     end
     true
   end
+
+  private
+  #  Calculate the number of node by travesing the list
+  #  @return [Integer] Number of nodes
+  def calc_size
+    nb = 0
+    current_node = @list
+    until current_node.nil?
+      nb += 1
+      current_node = current_node.next
+    end
+    nb
+  end
+
+
 end
 
 # Represent a Node, used in LinkedList class

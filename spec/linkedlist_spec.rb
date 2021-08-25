@@ -187,4 +187,19 @@ describe LinkedList do
       end
     end
   end
+
+  describe '.size' do 
+    context 'Given a list with 5 nodes' do 
+      it 'should return 5 when called' do
+        tlist = LinkedList.new(1)
+        tlist.append(2)
+        tlist.append(3)
+        tlist.append(4)
+        tlist.append(5)
+        expect(tlist.size).to eq(5)
+      end 
+    end 
+  end 
+
+
 end
