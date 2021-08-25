@@ -18,7 +18,7 @@ This is an assignment from [The odin Project](https://www.theodinproject.com/pat
 
 To go a bit deeper and ease the coding i tried to implement the class with tests - I did not want to manualy test that it was working.
 
-#Example of use
+## Example of use
 
 ```ruby
 	tlist = new LinkedList(5)
